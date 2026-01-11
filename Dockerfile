@@ -12,7 +12,7 @@ COPY src/PGSCTF/ ./PGSCTF/
 # Use pre-built frontend
 COPY src/PGSCTF/ClientApp/build ./PGSCTF/wwwroot/
 WORKDIR /src/PGSCTF
-RUN dotnet publish -c Release -o /app/publish --no-restore
+RUN dotnet publish -c Release -o /app/publish --no-restore -p:SkipFrontendBuild=true
 
 # Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:10.0-alpine AS final

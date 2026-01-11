@@ -144,7 +144,7 @@
     <Exec WorkingDirectory="$(SpaRoot)" Command="$(NodePackageManager) install $(NodePackageInstallArgs)"/>
   </Target>
 
-  <Target Name="PublishFrontend" AfterTargets="ComputeFilesToPublish" DependsOnTargets="DetectNodeEnv">
+  <Target Name="PublishFrontend" AfterTargets="ComputeFilesToPublish" DependsOnTargets="DetectNodeEnv" Condition="'$(SkipFrontendBuild)' != 'true'">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
     <Exec WorkingDirectory="$(SpaRoot)" Command="$(NodePackageManager) install $(NodePackageInstallArgs)"/>
     <Exec WorkingDirectory="$(SpaRoot)" Command="$(NodePackageManager) run build"/>
