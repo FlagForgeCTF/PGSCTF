@@ -7,7 +7,7 @@ export function fetchContributors(): Plugin {
     name: 'fetch-contributors',
     async buildStart() {
       try {
-        const response = await fetch('https://api.github.com/repos/FlagForge/PGSCTF/contributors')
+        const response = await fetch('https://api.github.com/repos/FlagForgeCTF/PGSCTF/contributors')
         if (!response.ok) {
           console.warn('Failed to fetch contributors from GitHub')
           return

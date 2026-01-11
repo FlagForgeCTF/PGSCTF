@@ -1,9 +1,0 @@
-/* The PGS::CTF Project @unknown
- * 
- * License   : GNU Affero General Public License v3.0 (Core)
- * License   : LicenseRef-PGSCTF-Restricted (Restricted components)
- * Commit    : Unofficial build version
- * Build     : 2026-01-11T18:05:03.233Z
- * Copyright (C) 2026 FlagForge. All Rights Reserved.
- */
-import{$n as e,Dr as t,Na as n,Or as r,Un as i,X as a,ba as o,j as s,q as c}from"./index.k141k1jt.js";var l=s(),u=n(o());const d=async t=>{if(t instanceof e){if(t.response?.data instanceof Blob){let e=t.response.data;if(e.type===i.Text)return await e.text();if(e.type===i.Json){let t=window.JSON.parse(await e.text());if(t.title)return t.title}}return t.message}else return String(t)};var f=(e,t)=>{if(e.data instanceof Blob){let n=window.URL.createObjectURL(e.data),r=e.headers[`content-disposition`];!t&&r&&(t=(e=>{let t=e.match(/filename\*=UTF-8''([^;]+)/i);if(t)return decodeURIComponent(t[1]);let n=e.match(/filename="?([^";]+)"?/);if(n)return n[1]})(r));let i=document.createElement(`a`);i.style.display=`none`,i.href=n,t&&(i.download=t),document.body.appendChild(i),i.click(),window.setTimeout(()=>{i.remove(),window.URL.revokeObjectURL(n)})}else throw Error(`Response data is not a Blob`)};const p=async(e,n,i,o)=>{n(!0),t({color:`orange`,id:`blob-download`,message:i(`common.download.started`),loading:!0,autoClose:!1});try{let t=await e;r({id:`blob-download`,color:`teal`,message:i(`common.download.success`),icon:(0,u.jsx)(l.Icon,{path:c,size:1}),loading:!1,autoClose:!0}),f(t,o)}catch(e){r({id:`blob-download`,color:`red`,title:i(`common.download.failed`),message:await d(e),icon:(0,u.jsx)(l.Icon,{path:a,size:1}),autoClose:!1,withCloseButton:!0})}finally{n(!1)}};export{d as n,p as t};

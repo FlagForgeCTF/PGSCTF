@@ -1,0 +1,9 @@
+/* The PGS::CTF Project @unknown
+ * 
+ * License   : GNU Affero General Public License v3.0 (Core)
+ * License   : LicenseRef-PGSCTF-Restricted (Restricted components)
+ * Commit    : Unofficial build version
+ * Build     : 2026-01-11T18:30:01.190Z
+ * Copyright (C) 2026 FlagForge. All Rights Reserved.
+ */
+import{t as e}from"./etn8vgix.js";import"./obcyl8uq.js";import{Dr as t,Gr as n,Na as r,Oa as i,Qr as a,Rn as o,X as s,ba as c,j as l,lr as u,mr as d,q as f,ur as p}from"./index.h3ia39tz.js";import{t as m}from"./ccnxtp1j.js";var h=l(),g=r(i(),1),_=r(c(),1),v=()=>{let r=p(),i=u(),c=new URLSearchParams(i.search),l=c.get(`token`),v=c.get(`email`),[y,b]=(0,g.useState)(!1),{t:x}=d();return e(x(`account.title.verify`)),(0,_.jsx)(m,{onSubmit:async e=>{if(e.preventDefault(),!l||!v){t({color:`red`,title:x(`account.notification.verify.failed`),message:x(`common.error.param_missing`),icon:(0,_.jsx)(h.Icon,{path:s,size:1})});return}b(!0);try{await o.account.accountVerify({token:l,email:v}),t({color:`teal`,title:x(`account.notification.verify.success`),message:window.atob(v),icon:(0,_.jsx)(h.Icon,{path:f,size:1})}),r(`/account/login`)}catch{t({color:`red`,title:x(`account.notification.verify.failed`),message:x(`common.error.param_error`),icon:(0,_.jsx)(h.Icon,{path:s,size:1})})}finally{b(!1)}},children:v&&l?(0,_.jsxs)(_.Fragment,{children:[(0,_.jsx)(a,{size:`md`,fw:500,children:x(`account.content.welcome`,{decodeEmail:window.atob(v)})}),(0,_.jsx)(a,{size:`md`,fw:500,children:x(`account.content.verify.message`)}),(0,_.jsx)(n,{mt:`lg`,type:`submit`,w:`50%`,disabled:y,children:x(`account.button.verify_account`)})]}):(0,_.jsxs)(_.Fragment,{children:[(0,_.jsx)(a,{size:`md`,fw:500,children:x(`account.content.link_invalid`)}),(0,_.jsx)(a,{size:`md`,fw:500,children:x(`account.content.link_check`)})]})})};export{v as default};

@@ -1,0 +1,9 @@
+/* The PGS::CTF Project @unknown
+ * 
+ * License   : GNU Affero General Public License v3.0 (Core)
+ * License   : LicenseRef-PGSCTF-Restricted (Restricted components)
+ * Commit    : Unofficial build version
+ * Build     : 2026-01-11T18:30:01.190Z
+ * Copyright (C) 2026 FlagForge. All Rights Reserved.
+ */
+import{t as e}from"./obcyl8uq.js";import{t}from"./jlyi41oa.js";import{t as n}from"./me2p4g9l.js";import{$i as r,Mn as i,Na as a,Oa as o,Qr as s,Wr as c,X as l,_i as u,ba as d,j as f,ki as p,mr as m,q as h}from"./index.h3ia39tz.js";var g=f();o();var _=a(d()),v=({meets:e,label:t})=>(0,_.jsx)(s,{c:e?`teal`:`red`,mt:5,size:`sm`,children:(0,_.jsxs)(c,{inline:!0,children:[e?(0,_.jsx)(g.Icon,{path:h,size:.7}):(0,_.jsx)(g.Icon,{path:l,size:.7}),(0,_.jsx)(p,{ml:7,children:t})]})});const y=a=>{let[o,{close:s,open:c}]=r(!1),l=a.value,d=i(),{t:f}=m(),p=[{re:/[0-9]/,label:f(`account.password.include_number`)},{re:/[a-z]/,label:f(`account.password.include_lowercase`)},{re:/[A-Z]/,label:f(`account.password.include_uppercase`)},{re:/[`$&+,:;=?@#|'<>.^*()%!-]/,label:f(`account.password.include_symbol`)}],h=e=>{let t=e.length>5?0:1;return p.forEach(n=>{n.re.test(e)||(t+=1)}),Math.max(100-100/(p.length+1)*t,0)},g=[(0,_.jsx)(v,{label:f(`account.password.min_length`),meets:l.length>=6},0),...p.map((e,t)=>(0,_.jsx)(v,{label:e.label,meets:e.re.test(l)},t+1))],y=h(l),b=y===100?`teal`:y>50?`yellow`:`red`;return(0,_.jsxs)(u,{withArrow:!0,opened:o,position:d?`top`:`right`,"data-mobile":d||void 0,classNames:{dropdown:e.dropdown},transitionProps:{transition:`pop-bottom-left`},children:[(0,_.jsx)(u.Target,{children:(0,_.jsx)(t,{required:!0,label:a.label??f(`account.label.password`),placeholder:`P4ssW@rd`,value:a.value,onFocusCapture:c,onBlurCapture:s,disabled:a.disabled,onChange:a.onChange,w:`100%`})}),(0,_.jsxs)(u.Dropdown,{children:[(0,_.jsx)(n,{color:b,value:y,size:5,mb:10}),g]})]})};export{y as t};

@@ -1,0 +1,9 @@
+/* The PGS::CTF Project @unknown
+ * 
+ * License   : GNU Affero General Public License v3.0 (Core)
+ * License   : LicenseRef-PGSCTF-Restricted (Restricted components)
+ * Commit    : Unofficial build version
+ * Build     : 2026-01-11T18:30:01.190Z
+ * Copyright (C) 2026 FlagForge. All Rights Reserved.
+ */
+import{E as e,Fr as t,Gr as n,Na as r,Qr as i,V as a,Vi as o,ba as s,cr as c,dr as l,j as u,lr as d,mr as f,pi as p,z as m}from"./index.h3ia39tz.js";import{t as h}from"./isol51v0.js";import{n as g}from"./h1ib8o7x.js";var _=u(),v=r(s());const y=r=>{let{children:s,isLoading:u,...y}=r,b=d(),{id:x,chalId:S}=l(),[C,w]=[parseInt(x??`-1`),parseInt(S??`-1`)],{challenges:T}=g(C),{t:E}=f(),D=o(),{prev:O,current:k,next:A}=T?((e,t)=>{let n=e.findIndex(e=>e.id===t);return{prev:e[n-1],current:e[n],next:e[n+1]}})(T,w):{prev:null,current:null,next:null},j=e(),M=e=>e?j.get(e.category)?.color??D.primaryColor:D.primaryColor,N=b.pathname.replace(/\/admin\/games\/\d+\/challenges\/\d+/,``);return(0,v.jsx)(h,{isLoading:u,...y,children:(0,v.jsxs)(t,{mih:`calc(100vh - 12rem)`,justify:`space-between`,children:[s,(0,v.jsxs)(p,{justify:`space-between`,w:`100%`,wrap:`nowrap`,children:[(0,v.jsx)(n,{justify:`space-between`,component:c,disabled:u||!O,leftSection:(0,v.jsx)(_.Icon,{path:m,size:1}),to:O?.id?`/admin/games/${C}/challenges/${O?.id}${N}`:`#`,children:E(`admin.button.challenges.previous`)}),(0,v.jsxs)(p,{justify:`space-between`,gap:`xs`,wrap:`nowrap`,maw:`calc(100% - 16rem)`,children:[(0,v.jsx)(i,{c:`dimmed`,truncate:!0,children:O?.title??``}),(0,v.jsx)(i,{fw:`bold`,c:M(k),truncate:!0,children:k?.title??``}),(0,v.jsx)(i,{c:`dimmed`,truncate:!0,children:A?.title??``})]}),(0,v.jsx)(n,{disabled:u||!A,justify:`space-between`,component:c,rightSection:(0,v.jsx)(_.Icon,{path:a,size:1}),to:A?.id?`/admin/games/${C}/challenges/${A?.id}${N}`:`#`,children:E(`admin.button.challenges.next`)})]})]})})};export{y as t};

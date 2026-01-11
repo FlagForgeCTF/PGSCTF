@@ -6,4 +6,4 @@
  * Build     : 2026-01-11T18:30:01.190Z
  * Copyright (C) 2026 FlagForge. All Rights Reserved.
  */
-function e(e){return typeof e==`object`&&e?`base`in e?e.base:void 0:e}export{e as t};
+import{In as e,ca as t}from"./index.h3ia39tz.js";function n(e){t(()=>{typeof e==`string`&&e.trim().length>0&&(document.title=e.trim())},[e])}const r=t=>{let{config:r,error:i}=e(),a=i?`PGS::CTF`:`${r?.title??`PGS`}::CTF`;n(typeof t==`string`&&t.trim().length>0?`${t} - ${a}`:a)};export{r as t};

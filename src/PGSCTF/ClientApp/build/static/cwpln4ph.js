@@ -6,4 +6,4 @@
  * Build     : 2026-01-11T18:30:01.190Z
  * Copyright (C) 2026 FlagForge. All Rights Reserved.
  */
-function e(e){return typeof e==`object`&&e?`base`in e?e.base:void 0:e}export{e as t};
+import{Na as e,Oa as t}from"./index.h3ia39tz.js";var n=e(t());function r(){let[e,t]=(0,n.useState)(),[r,i]=(0,n.useState)(0),[a,o]=(0,n.useState)(0);return{data:e,total:r,length:a,setData:e=>{t(e.data),i(e.total??0),o(e.length)},updateData:e=>{t(e),o(e.length)}}}export{r as t};

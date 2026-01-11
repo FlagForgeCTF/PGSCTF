@@ -1,0 +1,9 @@
+/* The PGS::CTF Project @unknown
+ * 
+ * License   : GNU Affero General Public License v3.0 (Core)
+ * License   : LicenseRef-PGSCTF-Restricted (Restricted components)
+ * Commit    : Unofficial build version
+ * Build     : 2026-01-11T18:30:01.190Z
+ * Copyright (C) 2026 FlagForge. All Rights Reserved.
+ */
+import{Dr as e,Na as t,Rn as n,Ta as r,X as i,ba as a,j as o,mr as s,q as c,sr as l,ur as u}from"./index.h3ia39tz.js";function d(e,t){return e in t?r(t[e]):r(e)}function f(e,t){let n=e.map(e=>({value:e,px:d(e,t)}));return n.sort((e,t)=>e.px-t.px),n}var p=o(),m=t(a());const h=()=>{let t=u(),{t:r}=s(),{data:a,error:o,mutate:c}=n.account.useAccountProfile({refreshInterval:0,shouldRetryOnError:!1,revalidateOnFocus:!1,onErrorRetry:async(a,o,s,l,{retryCount:u})=>{if(a?.status===403){await n.account.accountLogOut(),t(`/`),e({color:`red`,message:r(`account.notification.login.banned`),icon:(0,m.jsx)(p.Icon,{path:i,size:1})});return}if(a?.status===401||u>=5){c(void 0,!1);return}setTimeout(()=>l({retryCount:u}),1e4)}});return{user:a,error:o,mutate:c}},g=()=>{let{user:e,error:t}=h();return{role:e?.role,error:t}},_=()=>{let{data:e,error:t,mutate:r}=n.team.useTeamGetTeamsInfo({refreshInterval:12e4,shouldRetryOnError:!1,revalidateOnFocus:!1});return{teams:e,error:t,mutate:r}},v=()=>{let t=u(),{mutate:r}=l(),{mutate:i}=h(),{t:a}=s();return async()=>{try{await n.account.accountLogOut(),t(`/`),r(e=>typeof e==`string`&&e.includes(`game/`),void 0,{revalidate:!1}),i(void 0,{revalidate:!1}),e({color:`teal`,message:a(`account.notification.logout`),icon:(0,m.jsx)(p.Icon,{path:c,size:1})})}catch{t(`/`),i(void 0,{revalidate:!1})}}};export{f as a,g as i,_ as n,d as o,h as r,v as t};
