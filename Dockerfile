@@ -5,6 +5,15 @@ RUN corepack enable && corepack prepare pnpm@latest --activate
 COPY src/PGSCTF/ClientApp/package.json src/PGSCTF/ClientApp/pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
 COPY src/PGSCTF/ClientApp/ ./
+
+ARG GIT_SHA=unknown
+ARG GIT_NAME=develop
+ARG BUILD_TIMESTAMP
+
+ENV VITE_APP_GIT_SHA=${GIT_SHA}
+ENV VITE_APP_GIT_NAME=${GIT_NAME}
+ENV VITE_APP_BUILD_TIMESTAMP=${BUILD_TIMESTAMP}
+
 RUN pnpm run build
 
 # Build stage for backend
