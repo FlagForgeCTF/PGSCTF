@@ -1,0 +1,9 @@
+/* The PGS::CTF Project @unknown
+ * 
+ * License   : GNU Affero General Public License v3.0 (Core)
+ * License   : LicenseRef-PGSCTF-Restricted (Restricted components)
+ * Commit    : Unofficial build version
+ * Build     : 2026-01-11T18:05:03.233Z
+ * Copyright (C) 2026 FlagForge. All Rights Reserved.
+ */
+import{t as e}from"./guefvrm7.js";import{n as t,t as n}from"./n8odgezn.js";import{t as r}from"./d7mhx9l1.js";import{Br as i,Fr as a,Mr as o,Na as s,Qr as c,Wr as l,Zr as u,ba as d,cr as f,lr as p,mr as m,ur as h}from"./index.k141k1jt.js";var g=s(d(),1),_=()=>{let s=p().state?.email||`ctf@example.com`,{t:d}=m(),_=h();return e(d(`account.title.verify_email`)),(0,g.jsx)(l,{h:`100vh`,children:(0,g.jsxs)(a,{align:`center`,justify:`center`,maw:400,px:`md`,children:[(0,g.jsx)(t,{onClick:()=>_(`/`)}),(0,g.jsxs)(a,{gap:`xs`,align:`center`,justify:`center`,children:[(0,g.jsx)(o,{order:3,ta:`center`,children:d(`account.content.verify_email.title`)}),(0,g.jsx)(c,{size:`md`,fw:`bold`,ta:`center`,children:(0,g.jsx)(r,{i18nKey:`account.content.verify_email.message`})}),(0,g.jsx)(c,{size:`md`,fw:`bold`,ff:`monospace`,c:`brand`,ta:`center`,children:s}),(0,g.jsxs)(a,{gap:4,mt:`sm`,align:`stretch`,w:`100%`,children:[(0,g.jsx)(c,{size:`xs`,fw:`bold`,ta:`center`,children:d(`account.content.verify_email.not_received.title`)}),(0,g.jsx)(i,{spacing:4,size:`xs`,c:`dimmed`,withPadding:!0,children:(0,g.jsxs)(r,{i18nKey:`account.content.verify_email.not_received.list`,children:[(0,g.jsx)(i.Item,{}),(0,g.jsx)(i.Item,{})]})})]}),(0,g.jsx)(u,{fz:`xs`,className:n.alignSelfEnd,component:f,to:`/account/login`,mt:`sm`,children:d(`account.anchor.login`)})]})]})})};export{_ as default};

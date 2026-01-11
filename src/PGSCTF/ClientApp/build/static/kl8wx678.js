@@ -1,0 +1,9 @@
+/* The PGS::CTF Project @unknown
+ * 
+ * License   : GNU Affero General Public License v3.0 (Core)
+ * License   : LicenseRef-PGSCTF-Restricted (Restricted components)
+ * Commit    : Unofficial build version
+ * Build     : 2026-01-11T18:05:03.233Z
+ * Copyright (C) 2026 FlagForge. All Rights Reserved.
+ */
+import{s as e,t}from"./dr4rxs8o.js";import{t as n}from"./guefvrm7.js";import{F as r,Fr as i,N as a,Na as o,Oa as s,Xt as c,Zn as l,ba as u,fn as d,ht as f,j as p,lr as m,mr as h,pi as g,u as _,ur as v,xt as y}from"./index.k141k1jt.js";import{n as b}from"./goltfvme.js";import{t as x}from"./k1fsd0xt.js";var S=p(),C=o(s()),w=o(u());const T=({head:t,headProps:o,isLoading:s,children:l})=>{let u=v(),p=m(),{t:b}=h(),T=[{icon:y,title:b(`admin.tab.games.index`),path:`games`},{icon:r,title:b(`admin.tab.teams`),path:`teams`},{icon:a,title:b(`admin.tab.users`),path:`users`},{icon:c,title:b(`admin.tab.instances`),path:`instances`},{icon:f,title:b(`admin.tab.logs`),path:`logs`},{icon:d,title:b(`admin.tab.settings`),path:`settings`}],E=e=>T.findIndex(t=>e.startsWith(`/admin/${t.path}`)),D=E(p.pathname),[O,k]=(0,C.useState)(D<0?0:D);return(0,C.useEffect)(()=>{let e=E(p.pathname);e>=0?k(e):u(T[0].path)},[p]),n(T[D].title),(0,w.jsxs)(i,{gap:`xs`,align:`center`,pt:`md`,children:[(0,w.jsx)(x,{withIcon:!0,active:O,onTabChange:(e,t)=>{k(e),u(`/admin/${t}`)},tabs:T.map(e=>({tabKey:e.path,label:e.title,icon:(0,w.jsx)(S.Icon,{path:e.icon,size:1})}))}),t&&(0,w.jsx)(g,{wrap:`nowrap`,justify:`space-between`,h:`40px`,w:`100%`,...o,children:t}),l,(0,w.jsx)(e,{visible:s??!1,overlayProps:_})]})},E=e=>(0,w.jsx)(t,{width:`90%`,minWidth:1080,children:(0,w.jsx)(b,{requiredRole:l.Admin,children:(0,w.jsx)(T,{...e})})});export{E as t};
