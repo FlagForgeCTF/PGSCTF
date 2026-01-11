@@ -1,22 +1,4 @@
-# Build stage for frontend
-FROM node:22-alpine AS frontend
-WORKDIR /app/ClientApp
-RUN corepack enable && corepack prepare pnpm@latest --activate
-COPY src/PGSCTF/ClientApp/package.json src/PGSCTF/ClientApp/pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile
-COPY src/PGSCTF/ClientApp/ ./
-
-ARG GIT_SHA=unknown
-ARG GIT_NAME=develop
-ARG BUILD_TIMESTAMP
-
-ENV VITE_APP_GIT_SHA=${GIT_SHA}
-ENV VITE_APP_GIT_NAME=${GIT_NAME}
-ENV VITE_APP_BUILD_TIMESTAMP=${BUILD_TIMESTAMP}
-
-RUN pnpm run build
-
-# Build stage for backend
+# Build stage for backend (frontend pre-built)
 FROM mcr.microsoft.com/dotnet/sdk:10.0-alpine AS backend
 WORKDIR /src
 
@@ -27,7 +9,8 @@ COPY src/Directory.Packages.props ./
 COPY src/PGSCTF/PGSCTF.csproj ./PGSCTF/
 RUN dotnet restore ./PGSCTF/PGSCTF.csproj
 COPY src/PGSCTF/ ./PGSCTF/
-COPY --from=frontend /app/ClientApp/build ./PGSCTF/wwwroot/
+# Use pre-built frontend
+COPY src/PGSCTF/ClientApp/build ./PGSCTF/wwwroot/
 WORKDIR /src/PGSCTF
 RUN dotnet publish -c Release -o /app/publish --no-restore
 
