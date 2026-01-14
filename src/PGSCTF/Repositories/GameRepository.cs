@@ -526,9 +526,14 @@ public class GameRepository(
         }
 
         // 6. sort scoreboard items by score and last submission time
+        // Note: Use DistinctBy to handle edge case where the same team has multiple participations
+        // (e.g., data inconsistency or multiple division entries). This prevents duplicate key
+        // exceptions when converting to dictionary. We keep the first occurrence after sorting,
+        // which will be the entry with the highest score and earliest submission time.
         items = items.Values
             .OrderByDescending(i => i.Score)
             .ThenBy(i => i.LastSubmissionTime)
+            .DistinctBy(i => i.Id) // ensure unique team IDs
             .ToDictionary(i => i.Id); // team id -> scoreboard item
 
         // 7. update rank and organization rank
